@@ -1,0 +1,405 @@
+body {
+  font-family: "Roboto", sans-serif; /* Общий шрифт */
+  background-color: #ffffff; /* Цвет фона */
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em; /* Процент переведен в em */
+  line-height: 1.5;
+  margin: 0; /* Убираем отступы по умолчанию */
+  padding: 0;
+}
+
+.header-container {
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  background: var(--WHITE, #fff);
+  width: 1440px;
+  height: 72px;
+  flex-shrink: 0;
+  display: grid; /* Grid для адаптивной сетки */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Адаптивные колонки */
+  gap: 20px; /* Расстояние между элементами */
+  list-style: none; /* Убираем маркеры списка */
+  max-width: 1440px; /* Ограничиваем ширину */
+}
+
+/* Общие стили логотипа */
+.logo {
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3%;
+  line-height: 21px; /* 116.667% */
+  display: inline-block;
+  font-style: normal;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  margin-top: 24px; /* Сверху */
+  margin-right: 0px; /* Справа */
+  margin-bottom: 24px; /* Снизу */
+  margin-left: 156px; /* Слева */
+}
+
+/* Стили первого слова логотипа */
+.logo-primary {
+  color: var(--IRIS, #4d5ae5);
+  width: 44px;
+}
+
+/* Стили второго слова логотипа */
+.logo-secondary {
+  color: var(--NAVY-BLUE, #2e2f42);
+  width: 71px;
+}
+
+.main-menu {
+}
+.menu-list {
+  list-style: none; /* Убираем маркеры списка */
+  display: flex; /* Выстраиваем элементы в строку */
+  gap: 20px; /* Расстояние между пунктами меню */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+/* Стили для элементов списка */
+.menu-item {
+  margin-top: 24px; /* Сверху */
+  margin-right: 15px; /* Справа */
+  margin-bottom: 24px; /* Снизу */
+  margin-left: 15px; /* Слева */
+}
+
+/* Стили для ссылок */
+.menu-link {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: var(--NAVY-BLUE, #2e2f42);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+/* Стили при наведении */
+.menu-link:hover {
+  color: #404bbf; /* Цвет текста при наведении */
+  text-decoration: underline; /* Добавляем подчеркивание */
+}
+
+/* Стили для контейнера адреса */
+.contact-info {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0; /* Сбрасываем отступы по умолчанию, если нужно */
+  padding: 0;
+}
+
+/* Стили для списка контактов */
+.contact-list {
+  display: flex;
+  list-style: none; /* Убираем маркеры списка */
+  margin: 0; /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стили для элемента списка */
+.contact-item {
+  margin-top: 24px; /* Сверху */
+  margin-bottom: 24px; /* Снизу */
+  margin-right: 40px;
+  margin-left: 0px;
+}
+
+/* Стили для ссылок */
+.contact-link {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: var(--SLATE, #434455);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+/* Стили при наведении на ссылку */
+.contact-link:hover {
+  color: #404bbf; /* Изменение цвета при наведении */
+}
+
+.main-content {
+}
+
+.hero-section {
+}
+
+.hero-title {
+  background: var(--NAVY-BLUE, #2e2f42);
+  color: var(--WHITE, #fff);
+  text-align: center;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 107.143% */
+  letter-spacing: 1.12px;
+}
+
+.hero-button {
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--WHITE, #fff);
+
+  /* Button Text */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+.hero-button :hover {
+  color: #ffffff;
+  background-color: #404bbf;
+}
+
+/* Секция с преимуществами */
+.advantages-section {
+  padding: 60px 20px; /* Внутренние отступы сверху/снизу и по бокам */
+  background-color: #ffffff; /* Светлый фон */
+  text-align: center; /* Выравнивание текста по центру */
+  width: 100%; /* Ширина секции на весь экран */
+  box-sizing: border-box; /* Учитываем отступы в ширине */
+  margin: 0 auto; /* Центрирование секции */
+}
+
+/* Скрытый заголовок для SEO */
+.visually-hidden {
+  position: absolute; /* Убираем элемент из видимой области */
+  width: 1px; /* Минимальный размер */
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* Запрещаем перенос текста */
+  border: 0;
+}
+
+/* Список преимуществ */
+.advantages-list {
+  display: grid; /* Grid для адаптивной сетки */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Адаптивные колонки */
+  gap: 20px; /* Расстояние между элементами */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0 auto; /* Центрирование списка */
+  max-width: 1200px; /* Ограничиваем ширину */
+}
+
+/* Элементы списка */
+.advantages-item {
+  background-color: #ffffff; /* Белый фон элемента */
+  display: flex;
+  width: 264px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Заголовки преимуществ */
+.advantage-title {
+  color: var(--NAVY-BLUE, #2e2f42);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+  width: 264px;
+}
+
+/* Текст описания */
+.advantage-text {
+  color: var(--SLATE, #434455);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+  width: 264px;
+}
+
+.team-section {
+}
+
+.team-title {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+}
+
+.team-list {
+  display: grid; /* Grid для адаптивной сетки */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Адаптивные колонки */
+  gap: 20px; /* Расстояние между элементами */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0 auto; /* Центрирование списка */
+  max-width: 1200px; /* Ограничиваем ширину */
+}
+
+.team-item {
+  display: inline-flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-foto {
+  width: 264px;
+  height: 260px;
+}
+
+.time-name {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}
+
+.team-role {
+  color: var(--SLATE, #434455);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.project-card {
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 0.72px;
+}
+
+.card-list {
+  list-style: none;
+  display: grid; /* Включаем Grid Layout */
+  grid-template-columns: repeat(3, 1fr); /* Три карточки в строке */
+  gap: 20px; /* Расстояние между карточками */
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрируем контейнер на странице */
+  padding: 20px; /* Внутренние отступы */
+}
+
+.card-content {
+  display: flex;
+  width: 360px;
+  height: 420px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.card-photo {
+  width: 360px;
+  height: 300px;
+}
+
+.card-name {
+  color: var(--NAVY-BLUE, #2e2f42);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.4px;
+}
+
+.card-product {
+  color: var(--SLATE, #434455);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+.site-footer {
+  width: 1440px;
+  height: 312px;
+  flex-shrink: 0;
+  background: var(--NAVY-BLUE, #2e2f42);
+}
+
+.footer-description {
+  color: var(--CLOUD, #f4f4fd);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+  width: 264px;
+  margin-top: 10px; /* Сверху */
+  margin-right: 15px; /* Справа */
+  margin-bottom: 10px; /* Снизу */
+  margin-left: 15px; /* Слева */
+}
+
+.footer-logo {
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3%;
+  line-height: 21px; /* 116.667% */
+  display: inline-block;
+  font-style: normal;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  height: 21px;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.footer-web {
+  color: var(--IRIS, #4d5ae5);
+  width: 44px;
+}
+
+.footer-studio {
+  color: var(--CLOUD, #f4f4fd);
+  width: 71px;
+}
