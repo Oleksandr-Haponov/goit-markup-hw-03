@@ -105,13 +105,15 @@ header {
   color: #404bbf; /* Изменение цвета текста при наведении */
 }
 
-.conteiner-solutions {
+.container-solutions {
   width: 100%; /* Контейнер занимает всю ширину */
   height: 600px; /* Высота контейнера */
   background: var(--NAVY-BLUE, #2e2f42);
+  display: flex; /* Flexbox для центрирования содержимого */
+  flex-direction: column; /* Элементы размещены вертикально */
+  align-items: center; /* Центрируем элементы по горизонтали */
 }
 .hero-title {
-  background: var(--NAVY-BLUE, #2e2f42);
   color: var(--WHITE, #fff);
   text-align: center;
   font-size: 56px;
@@ -119,27 +121,36 @@ header {
   font-weight: 700;
   line-height: 60px; /* 107.143% */
   letter-spacing: 1.12px;
+  padding-left: 472px;
+  padding-top: 188px;
+  padding-right: 472px;
+}
+
+.button {
+  display: flex;
+  margin: 0 auto; /* Центрируем контейнер */
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  flex-direction: column; /* Элементы размещены вертикально */
+  align-items: center;
 }
 
 .hero-button {
-  border-radius: 4px;
-  background: var(--IRIS, #4d5ae5);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   display: inline-flex;
   padding: 16px 32px;
   align-items: flex-start;
   gap: 10px;
   color: var(--WHITE, #fff);
-
-  /* Button Text */
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+  background: var(--IRIS, #4d5ae5);
+  text-align: center; /* Центрируем текст внутри */
 }
 
-.hero-button :hover {
+.hero-button:hover {
   color: #ffffff;
   background-color: #404bbf;
 }
