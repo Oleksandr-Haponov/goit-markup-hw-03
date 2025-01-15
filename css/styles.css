@@ -9,133 +9,107 @@ body {
   padding: 0;
 }
 
+/* Стили для header */
+header {
+  background-color: #ffffff; /* Фон заголовка */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень под header */
+  padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+/* Контейнер для содержимого header */
 .header-container {
-  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
-  background: var(--WHITE, #fff);
-  width: 1440px;
-  height: 72px;
-  flex-shrink: 0;
-  display: grid; /* Grid для адаптивной сетки */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Адаптивные колонки */
-  gap: 20px; /* Расстояние между элементами */
-  list-style: none; /* Убираем маркеры списка */
-  max-width: 1440px; /* Ограничиваем ширину */
+  display: flex; /* Flexbox для горизонтального размещения */
+  justify-content: space-between; /* Распределение элементов по краям */
+  align-items: center; /* Выравнивание по вертикали */
+  max-width: 1200px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding: 0 20px; /* Внутренние отступы по бокам */
 }
 
-/* Общие стили логотипа */
+/* Логотип */
 .logo {
-  font-family: Raleway, sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 3%;
-  line-height: 21px; /* 116.667% */
-  display: inline-block;
-  font-style: normal;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
-  margin-top: 24px; /* Сверху */
-  margin-right: 0px; /* Справа */
-  margin-bottom: 24px; /* Снизу */
-  margin-left: 156px; /* Слева */
-}
-
-/* Стили первого слова логотипа */
-.logo-primary {
-  color: var(--IRIS, #4d5ae5);
-  width: 44px;
-}
-
-/* Стили второго слова логотипа */
-.logo-secondary {
-  color: var(--NAVY-BLUE, #2e2f42);
-  width: 71px;
-}
-
-.main-menu {
-}
-.menu-list {
-  list-style: none; /* Убираем маркеры списка */
-  display: flex; /* Выстраиваем элементы в строку */
-  gap: 20px; /* Расстояние между пунктами меню */
-  padding: 0; /* Убираем внутренние отступы */
-  margin: 0; /* Убираем внешние отступы */
-}
-
-/* Стили для элементов списка */
-.menu-item {
-  margin-top: 24px; /* Сверху */
-  margin-right: 15px; /* Справа */
-  margin-bottom: 24px; /* Снизу */
-  margin-left: 15px; /* Слева */
-}
-
-/* Стили для ссылок */
-.menu-link {
+  font-family: "Raleway", sans-serif; /* Шрифт логотипа */
   text-decoration: none; /* Убираем подчеркивание */
-  color: var(--NAVY-BLUE, #2e2f42);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  font-weight: 700; /* Жирное начертание */
+  font-size: 18px; /* Размер текста */
+  text-transform: uppercase; /* Верхний регистр */
+  display: inline-block;
 }
 
-/* Стили при наведении */
-.menu-link:hover {
-  color: #404bbf; /* Цвет текста при наведении */
-  text-decoration: underline; /* Добавляем подчеркивание */
+.logo-primary {
+  color: #4d5ae5; /* Синий цвет первой части логотипа */
+  margin-right: 4px; /* Отступ между словами */
 }
 
-/* Стили для контейнера адреса */
-.contact-info {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  margin: 0; /* Сбрасываем отступы по умолчанию, если нужно */
+.logo-secondary {
+  color: #2e2f42; /* Темный цвет второй части логотипа */
+}
+
+/* Меню */
+.main-menu {
+  margin-left: 40px; /* Отступ от логотипа */
+}
+
+.menu-list {
+  display: flex; /* Горизонтальное размещение пунктов меню */
+  list-style: none; /* Убираем маркеры списка */
+  gap: 20px; /* Расстояние между пунктами меню */
+  margin: 0;
   padding: 0;
 }
 
-/* Стили для списка контактов */
-.contact-list {
-  display: flex;
-  list-style: none; /* Убираем маркеры списка */
+.menu-item {
   margin: 0; /* Убираем внешние отступы */
-  padding: 0; /* Убираем внутренние отступы */
 }
 
-/* Стили для элемента списка */
+.menu-link {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #2e2f42; /* Основной цвет текста */
+  font-weight: 500;
+  font-size: 16px; /* Размер текста */
+  line-height: 24px;
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.menu-link:hover {
+  color: #404bbf; /* Синий цвет текста при наведении */
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Контакты */
+.contact-info {
+  font-style: normal; /* Отключаем курсив у тега address */
+}
+
+.contact-list {
+  display: flex; /* Горизонтальное размещение контактов */
+  list-style: none; /* Убираем маркеры списка */
+  gap: 20px; /* Расстояние между контактами */
+  margin: 0;
+  padding: 0;
+}
+
 .contact-item {
-  margin-top: 24px; /* Сверху */
-  margin-bottom: 24px; /* Снизу */
-  margin-right: 40px;
-  margin-left: 0px;
+  margin: 0; /* Убираем внешние отступы */
 }
 
-/* Стили для ссылок */
 .contact-link {
   text-decoration: none; /* Убираем подчеркивание */
-  color: var(--SLATE, #434455);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  color: #434455; /* Цвет текста контактов */
+  font-size: 16px; /* Размер текста */
+  font-weight: 400; /* Обычное начертание */
+  transition: color 0.3s ease; /* Плавный переход цвета */
 }
 
-/* Стили при наведении на ссылку */
 .contact-link:hover {
-  color: #404bbf; /* Изменение цвета при наведении */
+  color: #404bbf; /* Изменение цвета текста при наведении */
 }
 
-.main-content {
+.conteiner-solutions {
+  width: 100%; /* Контейнер занимает всю ширину */
+  height: 600px; /* Высота контейнера */
+  background: var(--NAVY-BLUE, #2e2f42);
 }
-
-.hero-section {
-}
-
 .hero-title {
   background: var(--NAVY-BLUE, #2e2f42);
   color: var(--WHITE, #fff);
@@ -388,10 +362,6 @@ body {
   font-style: normal;
   letter-spacing: 0.54px;
   text-transform: uppercase;
-  height: 21px;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
 }
 
 .footer-web {
