@@ -22,40 +22,44 @@
     <!-- Подключение пользовательских стилей -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
-    <header class="page-header">
+    <header>
       <div class="header-container">
-        <a href="/" class="logo"
-          >Web<span class="logo-secondary">Studio</span></a
-        >
+        <!-- Логотип -->
+        <a href="/" class="logo">
+          <span class="logo-primary">Web</span>
+          <span class="logo-secondary">Studio</span>
+        </a>
+        <!-- Меню -->
         <nav class="main-menu">
           <ul class="menu-list">
-            <li class="menu-item"><a href="#" class="menu-link">Studio</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Studio</a>
+            </li>
             <li class="menu-item">
               <a href="#" class="menu-link">Portfolio</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Contacts</a>
+              <a href="#" class="menu-link">Contact</a>
             </li>
           </ul>
         </nav>
+        <!-- Контакты -->
+        <address class="contact">
+          <ul class="contact-list">
+            <li class="contact-item">
+              <a href="tel:+110001111111" class="contact-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="contact-item">
+              <a href="mailto:info@devstudio.com" class="contact-link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
       </div>
-      <!-- Контакты -->
-      <address class="contact">
-        <ul class="contact-list">
-          <li class="contact-item">
-            <a href="tel:+110001111111" class="contact-link"
-              >+11 (000) 111-11-11</a
-            >
-          </li>
-          <li class="contact-item">
-            <a href="mailto:info@devstudio.com" class="contact-link"
-              >info@devstudio.com</a
-            >
-          </li>
-        </ul>
-      </address>
     </header>
 
     <!-- Основное содержимое страницы -->
@@ -63,13 +67,15 @@
       <!-- Секция # 1 "Hero" -->
       <section class="hero-section">
         <h1 class="hero-title">Effective Solutions<br />for Your Business</h1>
-        <button class="hero-button" type="button">Order Service</button>
+        <div class="button-container">
+          <button class="hero-button" type="button">Order Service</button>
+        </div>
       </section>
-      <!-- Секция # 2 "Advantages" -->
-      <section class="advantages">
+
+      <!-- Секция с преимуществами -->
+      <section class="advantages-section">
         <h2 class="visually-hidden">Our advantages</h2>
         <ul class="advantages-list">
-          <!-- Преимущество 1 -->
           <li class="advantages-item">
             <h3 class="advantage-title">Strategy</h3>
             <p class="advantage-text">
@@ -77,7 +83,6 @@
               perfect and creative solution.
             </p>
           </li>
-          <!-- Преимущество 2 -->
           <li class="advantages-item">
             <h3 class="advantage-title">Punctuality</h3>
             <p class="advantage-text">
@@ -85,7 +90,6 @@
               within the shortest possible time.
             </p>
           </li>
-          <!-- Преимущество 3 -->
           <li class="advantages-item">
             <h3 class="advantage-title">Diligence</h3>
             <p class="advantage-text">
@@ -93,7 +97,6 @@
               growth opportunities and minimize risk.
             </p>
           </li>
-          <!-- Преимущество 4 -->
           <li class="advantages-item">
             <h3 class="advantage-title">Technologies</h3>
             <p class="advantage-text">
@@ -103,68 +106,58 @@
           </li>
         </ul>
       </section>
-      <!-- Секция # 3 "Наша команда" -->
-      <div class="team-section-wrapper">
-        <section class="team-section">
-          <h2 class="team-title">Our Team</h2>
-          <ul class="team-list">
-            <!-- Участник команды 1 -->
-            <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/img.jpg"
-                alt="Mark Guerrero"
-                width="264"
-                height="260"
-              />
-              <h3 class="team-name">Mark Guerrero</h3>
-              <p class="team-role">Product Designer</p>
-            </li>
-            <!-- Участник команды 2 -->
-            <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/img-2.jpg"
-                alt="Tom Ford"
-                width="264"
-                height="260"
-              />
-              <h3 class="team-name">Tom Ford</h3>
-              <p class="team-role">Frontend Developer</p>
-            </li>
-            <!-- Участник команды 3 -->
-            <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/img-3.jpg"
-                alt="Camila Garcia"
-                width="264"
-                height="260"
-              />
-              <h3 class="team-name">Camila Garcia</h3>
-              <p class="team-role">Marketing</p>
-            </li>
-            <!-- Участник команды 4 -->
-            <li class="team-item">
-              <img
-                class="team-photo"
-                src="./images/img-4.jpg"
-                alt="Daniel Wilson"
-                width="264"
-                height="260"
-              />
-              <h3 class="team-name">Daniel Wilson</h3>
-              <p class="team-role">UI Designer</p>
-            </li>
-          </ul>
-        </section>
-      </div>
 
-      <!-- Секция # 4 "Портфолио" -->
-      <section class="portfolio">
+      <!-- Секция "Наша команда" -->
+      <section class="team-section">
+        <h2 class="team-title">Our Team</h2>
+        <ul class="team-list">
+          <li class="team-item">
+            <img
+              class="team-photo"
+              src="./images/img.jpg"
+              alt="Mark Guerrero"
+              width="264"
+            />
+            <h3 class="team-name">Mark Guerrero</h3>
+            <p class="team-role">Product Designer</p>
+          </li>
+          <li class="team-item">
+            <img
+              class="team-photo"
+              src="./images/img-2.jpg"
+              alt="Tom Ford"
+              width="264"
+            />
+            <h3 class="team-name">Tom Ford</h3>
+            <p class="team-role">Frontend Developer</p>
+          </li>
+          <li class="team-item">
+            <img
+              class="team-photo"
+              src="./images/img-3.jpg"
+              alt="Camila Garcia"
+              width="264"
+            />
+            <h3 class="team-name">Camila Garcia</h3>
+            <p class="team-role">Marketing</p>
+          </li>
+          <li class="team-item">
+            <img
+              class="team-photo"
+              src="./images/img-4.jpg"
+              alt="Daniel Wilson"
+              width="264"
+            />
+            <h3 class="team-name">Daniel Wilson</h3>
+            <p class="team-role">UI Designer</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Секция "Портфолио" -->
+      <section class="portfolio-section">
         <h2 class="portfolio-title">Our Portfolio</h2>
-        <ul class="portfolio-list">
-          <!-- Продукт 1 -->
+        <ul class="card-list">
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -175,7 +168,6 @@
             <h3 class="portfolio-name">Banking App</h3>
             <p class="portfolio-description">App</p>
           </li>
-          <!-- Продукт 2 -->
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -186,7 +178,6 @@
             <h3 class="portfolio-name">Cashless Payment</h3>
             <p class="portfolio-description">Marketing</p>
           </li>
-          <!-- Продукт 3 -->
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -197,7 +188,6 @@
             <h3 class="portfolio-name">Meditation App</h3>
             <p class="portfolio-description">App</p>
           </li>
-          <!-- Продукт 4 -->
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -208,7 +198,6 @@
             <h3 class="portfolio-name">Taxi Service</h3>
             <p class="portfolio-description">Marketing</p>
           </li>
-          <!-- Продукт 5 -->
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -219,7 +208,6 @@
             <h3 class="portfolio-name">Screen Illustrations</h3>
             <p class="portfolio-description">Design</p>
           </li>
-          <!-- Продукт 6 -->
           <li class="portfolio-item">
             <img
               class="portfolio-photo"
@@ -233,12 +221,12 @@
         </ul>
       </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
       <a href="/" class="footer-logo">
         Web<span class="footer-secondary">Studio</span>
       </a>
-      <!-- Описание компании -->
       <p class="footer-description">
         Increase the flow of customers and sales for your business with digital
         marketing & growth solutions.
