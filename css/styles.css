@@ -1,386 +1,388 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Общие стили */
 body {
-  font-family: "Roboto", sans-serif; /* Общий шрифт */
-  background-color: #ffffff; /* Цвет фона */
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em; /* Процент переведен в em */
-  line-height: 1.5;
-  margin: 0; /* Убираем отступы по умолчанию */
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #434455;
   padding: 0;
 }
 
-/* Стили для header */
-header {
-  background-color: #ffffff; /* Фон заголовка */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень под header */
-  padding: 10px 0; /* Отступы сверху и снизу */
-}
-
-/* Контейнер для содержимого header */
+/* Контейнер Header */
 .header-container {
-  display: flex; /* Flexbox для горизонтального размещения */
-  justify-content: space-between; /* Распределение элементов по краям */
-  align-items: center; /* Выравнивание по вертикали */
-  max-width: 1200px; /* Максимальная ширина */
-  margin: 0 auto; /* Центрирование контейнера */
-  padding: 0 20px; /* Внутренние отступы по бокам */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-/* Логотип */
+.page-header {
+  display: flex; /* Включаем flexbox */
+  justify-content: space-between; /* Размещаем элементы по краям */
+  align-items: center; /* Центрируем элементы по вертикали */
+  max-width: 1200px; /* Ограничиваем ширину контейнера */
+  margin: 0; /* Центрируем контейнер */
+  padding: 0; /* Добавляем отступы */
+  background: #fff; /* Цвет фона */
+  height: 72px; /* Высота хедера */
+}
+
+/* Общие стили для логотипа */
 .logo {
-  font-family: "Raleway", sans-serif; /* Шрифт логотипа */
-  text-decoration: none; /* Убираем подчеркивание */
-  font-weight: 700; /* Жирное начертание */
-  font-size: 18px; /* Размер текста */
-  text-transform: uppercase; /* Верхний регистр */
-  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #4d5ae5;
+  padding-left: 156px;
 }
 
-.logo-primary {
-  color: #4d5ae5; /* Синий цвет первой части логотипа */
-  margin-right: 4px; /* Отступ между словами */
-}
-
+/* Вторая часть логотипа */
 .logo-secondary {
-  color: #2e2f42; /* Темный цвет второй части логотипа */
+  color: #2e2f42; /* Цвет второй части логотипа */
 }
 
-/* Меню */
 .main-menu {
-  margin-left: 40px; /* Отступ от логотипа */
+  justify-content: center;
 }
 
 .menu-list {
-  display: flex; /* Горизонтальное размещение пунктов меню */
+  display: flex; /* Включаем горизонтальное размещение элементов */
   list-style: none; /* Убираем маркеры списка */
-  gap: 20px; /* Расстояние между пунктами меню */
-  margin: 0;
-  padding: 0;
-}
-
-.menu-item {
   margin: 0; /* Убираем внешние отступы */
+  padding: 0; /* Убираем внутренние отступы */
+  gap: 40px; /* Расстояние между пунктами меню */
+  margin-left: 76px;
 }
 
 .menu-link {
   text-decoration: none; /* Убираем подчеркивание */
-  color: #2e2f42; /* Основной цвет текста */
-  font-weight: 500;
-  font-size: 16px; /* Размер текста */
-  line-height: 24px;
-  transition: color 0.3s ease; /* Плавный переход цвета */
+  color: #333; /* Цвет текста */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 500; /* Полужирное начертание */
 }
 
-.menu-link:hover {
-  color: #404bbf; /* Синий цвет текста при наведении */
-  text-decoration: underline; /* Подчеркивание при наведении */
+.menu-link:hover,
+.menu-link:focus {
+  color: #404bbf;
+  text-decoration: underline;
 }
 
-/* Контакты */
-.contact-info {
-  font-style: normal; /* Отключаем курсив у тега address */
-}
-
+/* Список контактов */
 .contact-list {
-  display: flex; /* Горизонтальное размещение контактов */
-  list-style: none; /* Убираем маркеры списка */
-  gap: 20px; /* Расстояние между контактами */
+  list-style: none;
+  font-style: normal;
+  display: flex;
+  gap: 40px; /* Расстояние между строками */
   margin: 0;
   padding: 0;
 }
 
+/* Элементы списка контактов */
 .contact-item {
-  margin: 0; /* Убираем внешние отступы */
+  display: flex;
 }
 
+/* Ссылки контактов */
 .contact-link {
-  text-decoration: none; /* Убираем подчеркивание */
-  color: #434455; /* Цвет текста контактов */
-  font-size: 16px; /* Размер текста */
-  font-weight: 400; /* Обычное начертание */
-  transition: color 0.3s ease; /* Плавный переход цвета */
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-decoration: none;
+  display: flex;
 }
 
-.contact-link:hover {
-  color: #404bbf; /* Изменение цвета текста при наведении */
+.contact-link:hover,
+.contact-link:focus {
+  color: #404bbf;
 }
 
-.container-solutions {
-  width: 100%; /* Контейнер занимает всю ширину */
-  height: 600px; /* Высота контейнера */
-  background: var(--NAVY-BLUE, #2e2f42);
-  display: flex; /* Flexbox для центрирования содержимого */
-  flex-direction: column; /* Элементы размещены вертикально */
-  align-items: center; /* Центрируем элементы по горизонтали */
-}
-.hero-title {
-  color: var(--WHITE, #fff);
+/* Секция # 1 "Hero" */
+.hero-section {
+  background-color: #2e2f42;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 600px;
+}
+
+.hero-title {
+  color: #fff;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
-  line-height: 60px; /* 107.143% */
-  letter-spacing: 1.12px;
-  padding-left: 472px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
   padding-top: 188px;
-  padding-right: 472px;
-}
-
-.button {
-  display: flex;
-  margin: 0 auto; /* Центрируем контейнер */
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  flex-direction: column; /* Элементы размещены вертикально */
-  align-items: center;
 }
 
 .hero-button {
-  display: inline-flex;
-  padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
-  color: var(--WHITE, #fff);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.64px;
-  background: var(--IRIS, #4d5ae5);
-  text-align: center; /* Центрируем текст внутри */
-}
-
-.hero-button:hover {
   color: #ffffff;
-  background-color: #404bbf;
-}
-
-/* Секция с преимуществами */
-.advantages-section {
-  padding: 60px 20px; /* Внутренние отступы сверху/снизу и по бокам */
-  background-color: #ffffff; /* Светлый фон */
-  text-align: center; /* Выравнивание текста по центру */
-  width: 100%; /* Ширина секции на весь экран */
-  box-sizing: border-box; /* Учитываем отступы в ширине */
-  margin: 0 auto; /* Центрирование секции */
-}
-
-/* Скрытый заголовок для SEO */
-.visually-hidden {
-  position: absolute; /* Убираем элемент из видимой области */
-  width: 1px; /* Минимальный размер */
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* Запрещаем перенос текста */
-  border: 0;
-}
-
-/* Список преимуществ */
-.advantages-list {
-  display: grid; /* Grid для адаптивной сетки */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Адаптивные колонки */
-  gap: 20px; /* Расстояние между элементами */
-  list-style: none; /* Убираем маркеры списка */
-  padding: 0; /* Убираем внутренние отступы */
-  margin: 0 auto; /* Центрирование списка */
-  max-width: 1200px; /* Ограничиваем ширину */
-}
-
-/* Элементы списка */
-.advantages-item {
-  background-color: #ffffff; /* Белый фон элемента */
-  display: flex;
-  width: 264px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  text-align: left; /* Выравнивание текста по левому краю */
-}
-
-/* Заголовки преимуществ */
-.advantage-title {
-  color: var(--NAVY-BLUE, #2e2f42);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
-  width: 264px;
-}
-
-/* Текст описания */
-.advantage-text {
-  color: var(--SLATE, #434455);
+  background: #4d5ae5;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
-  width: 264px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  cursor: pointer;
+  border: none;
+  margin-top: 48px;
+  width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  display: flex; /* Добавлено для gap */
+  gap: 10px;
+  border-radius: 4px 0 0 0;
+  display: inline-block;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #404bbf;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Секция # 2 "Advantages" */
+.advantages {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute; /* Полностью убираем элемент с экрана */
+  width: 1px; /* Минимальная ширина */
+  height: 1px; /* Минимальная высота */
+  padding: 0; /* Убираем отступы */
+  margin: -1px; /* Скрываем за пределами видимой области */
+  overflow: hidden; /* Прячем содержимое */
+  clip: rect(0, 0, 0, 0); /* Обрезаем содержимое */
+  white-space: nowrap; /* Отключаем перенос текста */
+  border: 0; /* Убираем границы */
+}
+
+.advantages-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0 156px;
+}
+
+.advantages-item {
+  background-color: #fff;
+  padding: 20px;
+  text-align: left; /* Текст по левому краю */
+  flex-basis: ((100% - 384px) / 4);
+}
+
+.advantage-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2e2f42;
+  margin-bottom: 8px;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+}
+
+.advantage-text {
+  font-size: 16px;
+  color: #434455;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+/* Секция # 3 "Наша команда" */
+.team-section-wrapper {
+  background-color: #f4f4fd;
+  width: 100%;
+  height: 732px;
 }
 
 .team-section {
-}
-
-.team-title {
-  color: var(--NAVY-BLUE, #2e2f42);
   text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 40px; /* 111.111% */
-  letter-spacing: 0.72px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* Заголовок секции */
+.team-title {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize; /* Каждое слово с заглавной буквы */
+  margin-bottom: 120px; /* Отступ снизу */
+}
+
+/* Список участников */
 .team-list {
-  display: grid; /* Grid для адаптивной сетки */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(250px, 1fr)
-  ); /* Адаптивные колонки */
-  gap: 20px; /* Расстояние между элементами */
   list-style: none; /* Убираем маркеры списка */
   padding: 0; /* Убираем внутренние отступы */
-  margin: 0 auto; /* Центрирование списка */
-  max-width: 1200px; /* Ограничиваем ширину */
+  margin: 0 auto; /* Центровка списка */
+  display: flex;
+  gap: 24px; /* Расстояние между карточками */
+  padding: 0 156px;
 }
 
+/* Карточка участника */
 .team-item {
-  display: inline-flex;
-  padding-bottom: 32px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  border-radius: 0px 0px 4px 4px;
-  background: var(--WHITE, #fff);
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  background-color: #ffffff; /* Белый фон */
+  border-radius: 0px 0px 4px 4px; /* Скругленные углы */
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /* Тень карточки */
+  text-align: center; /* Центровка текста */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+  width: 264px;
+  height: auto;
 }
 
-.team-foto {
+.team-item:hover {
+  transform: translateY(-5px); /* Поднятие карточки при наведении */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Усиленная тень */
+}
+
+/* Фото участника */
+.team-photo {
   width: 264px;
   height: 260px;
+  max-width: 264px; /* Ограничение ширины фото */
+  margin-bottom: 32px; /* Центровка и отступ снизу */
+  object-fit: cover; /* Сохраняем пропорции изображения */
 }
 
-.time-name {
-  color: var(--NAVY-BLUE, #2e2f42);
-  text-align: center;
+/* Имя участника */
+.team-name {
+  color: #2e2f42;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px; /* Отступ снизу */
 }
 
+/* Роль участника */
 .team-role {
-  color: var(--SLATE, #434455);
-  text-align: center;
+  color: #434455;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px; /* Убираем лишние отступы */
 }
 
-.project-card {
-  color: var(--NAVY-BLUE, #2e2f42);
+/* Секция # 4 "Портфолио" */
+.portfolio {
+  background-color: #fff;
   text-align: center;
+  padding: 0 156px;
+}
+
+/* Заголовок секции */
+.portfolio-title {
   font-size: 36px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 40px; /* 111.111% */
-  letter-spacing: 0.72px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 40px;
 }
 
-.card-list {
+/* Список карточек */
+.portfolio-list {
   list-style: none;
-  display: grid; /* Включаем Grid Layout */
-  grid-template-columns: repeat(3, 1fr); /* Три карточки в строке */
-  gap: 20px; /* Расстояние между карточками */
-  max-width: 1200px; /* Максимальная ширина контейнера */
-  margin: 0 auto; /* Центрируем контейнер на странице */
-  padding: 20px; /* Внутренние отступы */
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
 }
 
-.card-content {
-  display: flex;
+/* Карточка */
+.portfolio-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Фото карточки */
+.portfolio-photo {
   width: 360px;
-  height: 420px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-shrink: 0;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-.card-photo {
-  width: 360px;
-  height: 300px;
-}
-
-.card-name {
-  color: var(--NAVY-BLUE, #2e2f42);
+/* Название продукта */
+.portfolio-name {
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 120% */
-  letter-spacing: 0.4px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 10px;
 }
 
-.card-product {
-  color: var(--SLATE, #434455);
+/* Описание продукта */
+.portfolio-description {
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  margin: 0;
 }
 
-.site-footer {
-  width: 1440px;
+/* Контейнер Footer */
+.footer {
+  background: #2e2f42;
+  width: 100%;
   height: 312px;
-  flex-shrink: 0;
-  background: var(--NAVY-BLUE, #2e2f42);
-}
-
-.footer-description {
-  color: var(--CLOUD, #f4f4fd);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
-  width: 264px;
-  margin-top: 10px; /* Сверху */
-  margin-right: 15px; /* Справа */
-  margin-bottom: 10px; /* Снизу */
-  margin-left: 15px; /* Слева */
 }
 
 .footer-logo {
-  font-family: Raleway, sans-serif;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 3%;
-  line-height: 21px; /* 116.667% */
-  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700; /* Жирное начертание */
+  font-size: 18px; /* Размер шрифта */
+  line-height: 1.17; /* Межстрочное расстояние */
+  letter-spacing: 0.03em; /* Отступы между буквами */
+  text-transform: uppercase; /* Преобразование в верхний регистр */
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #4d5ae5; /* Цвет первой части логотипа */
+  padding: 0 156px;
+}
+
+/* Вторая часть логотипа */
+.footer-secondary {
+  color: #f4f4fd; /* Цвет второй части логотипа */
+}
+
+.footer-description {
+  color: #f4f4fd;
+  font-size: 16px;
   font-style: normal;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
-}
-
-.footer-web {
-  color: var(--IRIS, #4d5ae5);
-  width: 44px;
-}
-
-.footer-studio {
-  color: var(--CLOUD, #f4f4fd);
-  width: 71px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 0 156px;
 }
