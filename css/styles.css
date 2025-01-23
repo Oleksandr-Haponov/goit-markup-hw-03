@@ -352,7 +352,7 @@ body {
   background: #2e2f42;
   width: 100%;
   height: 312px;
-  padding: 0 156px;
+  padding: 101.5px 156px 100px 156px;
 }
 
 .footer-text {
@@ -371,7 +371,6 @@ body {
   text-decoration: none; /* Убираем подчеркивание */
   color: #4d5ae5; /* Цвет первой части логотипа */
   display: block;
-  margin-top: 101.5px;
 }
 
 /* Вторая часть логотипа */
