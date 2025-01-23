@@ -140,9 +140,12 @@ body {
 
 /* Секция # 2 "Advantages" */
 .advantages {
-  padding: 40px 20px;
   background-color: #fff;
   text-align: center;
+}
+
+.section {
+  padding: 120px 0;
 }
 
 .visually-hidden {
@@ -160,34 +163,26 @@ body {
   display: flex;
   gap: 24px;
   list-style: none;
-  margin: 20px 0 0;
+  margin: 0;
   padding: 0 156px;
 }
 
+/* Пункт списку */
 .advantages-item {
-  text-align: left; /* Текст по левому краю */
+  flex-basis: calc((100% - 3 * 24px) / 4); /* Ширина пункту */
+  text-align: left; /* Текст по лівому краю */
 }
 
-.adv-text {
-  border: 1px solid #ffffff; /* Граница 1px */
-  padding: 0; /* Внутренние отступы от границы */
-  text-align: left; /* Выравнивание текста по левому краю */
-  margin-top: 120px;
-  margin-bottom: 120px;
-  gap: 24px;
-}
-
-.advantage-title {
+.advantages-title {
   font-size: 20px;
   font-weight: 500;
   color: #2e2f42;
   margin-bottom: 8px;
   line-height: 1.2em;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
 }
 
-.advantage-text {
+.advantages-text {
   font-size: 16px;
   color: #434455;
   line-height: 1.5em;
