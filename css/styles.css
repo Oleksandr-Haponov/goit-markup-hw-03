@@ -1,13 +1,31 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-/* Общие стили */
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; /* Убираем маркеры списка */
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* Контейнер Header */
@@ -20,6 +38,23 @@ body {
   background: #fff;
   height: 72px;
 }
+
+img {
+  display: block;
+  max-width: 100%; /* Щоб зображення не виходило за межі контейнера */
+  height: auto; /* Зберігаємо пропорції зображення */
+  margin: 0 auto; /* Додаємо вирівнювання по центру, якщо потрібно */
+}
+
+/* надо проверить отступы в фигме пока заккоментил
+.container { 
+max-width: 
+padding-left:  
+padding-right:  
+margin-left:  
+margin-right:  
+}
+*/
 
 /* Общие стили для логотипа */
 .logo {
