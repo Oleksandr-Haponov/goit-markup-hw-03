@@ -32,8 +32,7 @@ img {
 /* Общие настройки контейнеров всех */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 156px;
 }
 
 /* Стили Header */
@@ -167,7 +166,6 @@ img {
   position: absolute; /* Полностью убираем элемент с экрана */
   width: 1px; /* Минимальная ширина */
   height: 1px; /* Минимальная высота */
-  padding: 0; /* Убираем отступы */
   margin: -1px; /* Скрываем за пределами видимой области */
   overflow: hidden; /* Прячем содержимое */
 }
@@ -188,9 +186,9 @@ img {
   font-size: 20px;
   font-weight: 500;
   color: #2e2f42;
-  margin-bottom: 8px;
   line-height: 1.2em;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .advantages-text {
@@ -278,22 +276,12 @@ img {
   letter-spacing: 0.02em;
   margin: 0;
 }
+
 /* Секция # 4 "Портфолио" */
 .portfolio-section {
+  text-align: center;
   background-color: #fff;
-  padding: 0 156px; /* Отступы слева и справа */
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Список карточек */
-.portfolio-list {
-  list-style: none;
-  display: grid; /* Используем Grid */
-  grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
-  gap: 24px; /* Расстояние между карточками */
-  margin: 0 auto;
 }
 
 /* Заголовок секции */
@@ -305,7 +293,15 @@ img {
   text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
-  text-align: center;
+}
+
+/* Список карточек */
+.portfolio-list {
+  list-style: none;
+  display: grid; /* Используем Grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+  gap: 24px;
+  padding: 0 156px;
 }
 
 /* Карточка */
@@ -357,11 +353,10 @@ img {
   width: 100%;
   height: 312px;
   padding: 101.5px 156px 100px 156px;
-  text-decoration: none;
   text-align: left;
 }
 
-.footer-logo {
+.footer-logo-link {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -371,6 +366,7 @@ img {
   text-decoration: none;
   color: #4d5ae5;
   display: block;
+  text-decoration: none;
 }
 
 /* Вторая часть логотипа */
