@@ -359,6 +359,12 @@ img {
   text-align: left;
 }
 
+.container {
+  max-width: 1200px; /* Максимальна ширина */
+  margin: 0 auto; /* Центрування контейнера */
+  padding: 0 156px; /* Внутрішні відступи з боків */
+}
+
 .footer-logo-link {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -384,4 +390,5 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
+  padding: 100px 0;
 }
