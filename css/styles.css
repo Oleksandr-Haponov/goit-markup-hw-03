@@ -41,7 +41,7 @@ img {
   justify-content: space-between; /* Элементы по краям */
   align-items: center;
   width: 100%;
-  padding: 0 156px;
+  padding: 24px 156px;
   background: #fff;
   height: 72px;
   border-bottom: 1px solid #e7e9fc;
@@ -100,7 +100,6 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
   text-decoration: none;
-  padding: 0 24px;
 }
 
 .contact-link:hover,
@@ -180,6 +179,7 @@ img {
 /* Пункт списку */
 .advantages-item {
   text-align: left; /* Текст по лівому краю */
+  gap: 8px;
 }
 
 .advantages-title {
