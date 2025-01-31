@@ -17,6 +17,7 @@ ol {
 }
 
 body {
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   color: #434455;
   list-style: none;
@@ -31,20 +32,18 @@ img {
 }
 /* Общие настройки контейнеров всех */
 .container {
-  max-width: 1200px;
-  padding: 0 156px;
+  max-width: 1128px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-/* Стили Header */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 .header-container {
   display: flex;
-  justify-content: space-between; /* Элементы по краям */
   align-items: center;
-  width: 100%;
-  padding: 24px 156px;
-  background: #fff;
-  height: 72px;
-  border-bottom: 1px solid #e7e9fc;
 }
 
 /* Общие стили логотипа */
@@ -57,6 +56,11 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   color: #4d5ae5;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
 }
 
 /* Вторая часть логотипа */
@@ -354,11 +358,6 @@ img {
   height: 312px;
   padding: 0 156px;
   text-align: left;
-}
-
-.container {
-  max-width: 1200px; /* Максимальна ширина */
-  margin: 0 auto; /* Центрування контейнера */
 }
 
 .footer-logo-link {
