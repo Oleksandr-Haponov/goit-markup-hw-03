@@ -32,7 +32,7 @@ img {
 }
 /* Общие настройки контейнеров всех */
 .container {
-  max-width: 1200px;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -218,7 +218,8 @@ img {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-transform: capitalize; /* Каждое слово с заглавной буквы */
+  text-transform: capitalize;
+  text-align: center;
 }
 
 /* Список участников */
@@ -246,6 +247,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 /* Роль участника */
 .team-role {
@@ -254,6 +256,7 @@ img {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 /* Секция # 4 "Портфолио" */
@@ -319,8 +322,7 @@ img {
 .footer {
   background: #2e2f42;
   color: #f4f4fd;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 
 .footer-logo {
