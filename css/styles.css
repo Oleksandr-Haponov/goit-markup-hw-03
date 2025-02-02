@@ -165,10 +165,6 @@ img {
 .advantages {
   padding: 120px 0;
 }
-.advantages-container {
-  padding: 120px 15px;
-  margin: 0 auto;
-}
 
 .visually-hidden {
   position: absolute; /* Полностью убираем элемент с экрана */
