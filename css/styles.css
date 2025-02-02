@@ -32,16 +32,13 @@ img {
 }
 /* Общие настройки контейнеров всех */
 .container {
-  max-width: 1128px;
+  width: 1128px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  max-width: 1128px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .header-container {
