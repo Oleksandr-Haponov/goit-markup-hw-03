@@ -204,7 +204,7 @@ img {
 }
 
 /* Секция # 3 "Наша команда" */
-.team-section {
+.team-container {
   text-align: center;
   background-color: #f4f4fd;
   padding: 120px 0;
